@@ -1,0 +1,264 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assetes/warrior/front/body/Face_01.png" type="Texture" id=1]
+[ext_resource path="res://assetes/warrior/Warrior.gd" type="Script" id=2]
+[ext_resource path="res://assetes/warrior/front/body/Body.png" type="Texture" id=3]
+[ext_resource path="res://assetes/warrior/front/body/Face_02.png" type="Texture" id=4]
+[ext_resource path="res://assetes/warrior/front/body/Head.png" type="Texture" id=5]
+[ext_resource path="res://assetes/warrior/front/body/Left_Arm.png" type="Texture" id=6]
+[ext_resource path="res://assetes/warrior/front/body/Left_Hand.png" type="Texture" id=7]
+[ext_resource path="res://assetes/warrior/front/roupas/sword/sword_01.png" type="Texture" id=8]
+[ext_resource path="res://assetes/warrior/front/body/Right_Arm.png" type="Texture" id=9]
+[ext_resource path="res://assetes/warrior/front/roupas/arm_left/left_arm_01.png" type="Texture" id=10]
+[ext_resource path="res://assetes/warrior/front/body/Right_Hand.png" type="Texture" id=11]
+[ext_resource path="res://assetes/warrior/front/roupas/leg_left/left_shoes_01.png" type="Texture" id=12]
+[ext_resource path="res://assetes/warrior/front/roupas/leg_right/right_shoes_01.png" type="Texture" id=13]
+[ext_resource path="res://assetes/warrior/front/body/Left_Leg.png" type="Texture" id=14]
+[ext_resource path="res://assetes/warrior/front/roupas/arm_right/right_arm_01.png" type="Texture" id=15]
+[ext_resource path="res://assetes/warrior/front/roupas/hair/hair_01.png" type="Texture" id=16]
+[ext_resource path="res://assetes/warrior/front/roupas/body/body_01.png" type="Texture" id=17]
+[ext_resource path="res://assetes/warrior/front/roupas/shield/shield_01.png" type="Texture" id=18]
+[ext_resource path="res://assetes/warrior/front/roupas/hat/hat_01.png" type="Texture" id=19]
+[ext_resource path="res://assetes/warrior/front/body/Right_Leg.png" type="Texture" id=20]
+[ext_resource path="res://assetes/warrior/front/roupas/hand_right/right_hand_01.png" type="Texture" id=21]
+[ext_resource path="res://assetes/warrior/front/roupas/hand_left/left_hand_01.png" type="Texture" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "pisca",
+"speed": 5.0
+} ]
+
+[node name="Warrior_Front" type="Node2D"]
+position = Vector2( 686.252, 446.949 )
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 2 )
+
+[node name="Composicao" type="Node2D" parent="."]
+position = Vector2( -159.806, 2.82861 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Body" type="Sprite" parent="Composicao"]
+rotation = -0.0116872
+z_index = 1
+z_as_relative = false
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="head" type="Sprite" parent="Composicao/Body"]
+position = Vector2( 6.11544e-05, -251.984 )
+rotation = 0.00564406
+z_index = 2
+z_as_relative = false
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="chair" type="Sprite" parent="Composicao/Body/head"]
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="helm" type="Sprite" parent="Composicao/Body/head/chair"]
+texture = ExtResource( 19 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Composicao/Body/head"]
+position = Vector2( 0, 92.5 )
+z_index = 2
+z_as_relative = false
+frames = SubResource( 1 )
+animation = "pisca"
+frame = 6
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="arm_r" type="Sprite" parent="Composicao/Body"]
+position = Vector2( -77.2341, -41.8758 )
+rotation = 13.0031
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 9 )
+offset = Vector2( -20, 30 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="hand_r" type="Sprite" parent="Composicao/Body/arm_r"]
+position = Vector2( -24.7601, 66.4012 )
+z_index = 4
+z_as_relative = false
+texture = ExtResource( 11 )
+offset = Vector2( -1.84, 12 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="Sword" type="Sprite" parent="Composicao/Body/arm_r/hand_r"]
+position = Vector2( -2.6322, 15.5176 )
+rotation = -2.91539
+z_index = 3
+z_as_relative = false
+texture = ExtResource( 8 )
+offset = Vector2( 120, 0 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="right_hand_01" type="Sprite" parent="Composicao/Body/arm_r/hand_r"]
+position = Vector2( -1.58533, 10.8346 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="roupa" type="Sprite" parent="Composicao/Body/arm_r"]
+position = Vector2( -21.4722, 30.6954 )
+z_index = 5
+z_as_relative = false
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="leg_r" type="Sprite" parent="Composicao/Body"]
+position = Vector2( -50.4112, 123.953 )
+z_as_relative = false
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="Right_Shoes" type="Sprite" parent="Composicao/Body/leg_r"]
+position = Vector2( 0.222656, -0.335999 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="arm_l" type="Sprite" parent="Composicao/Body"]
+position = Vector2( 78.677, -42.0059 )
+rotation = -0.127409
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 6 )
+offset = Vector2( 20, 30 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="hand_l" type="Sprite" parent="Composicao/Body/arm_l"]
+position = Vector2( 36.2157, 79.3471 )
+z_as_relative = false
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="Shield" type="Sprite" parent="Composicao/Body/arm_l/hand_l"]
+position = Vector2( -3.10094, 16.444 )
+z_index = 2
+z_as_relative = false
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="left_hand_01" type="Sprite" parent="Composicao/Body/arm_l/hand_l"]
+position = Vector2( -1.5204, -1.0922 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Left_Arm_clothes" type="Sprite" parent="Composicao/Body/arm_l"]
+position = Vector2( 17.2147, 31.5136 )
+z_as_relative = false
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="leg_l" type="Sprite" parent="Composicao/Body"]
+position = Vector2( 50.3968, 123.472 )
+z_as_relative = false
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="Left_Shoes" type="Sprite" parent="Composicao/Body/leg_l"]
+position = Vector2( -3.55701, -0.595825 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Body_clothes" type="Sprite" parent="Composicao/Body"]
+position = Vector2( 0.222778, -15.455 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="escudo" type="Button" parent="."]
+margin_left = -289.627
+margin_top = -37.3787
+margin_right = -277.627
+margin_bottom = -17.3787
+rect_scale = Vector2( 2.38492, 2.32932 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="espada" type="Button" parent="."]
+margin_left = -298.633
+margin_top = -123.725
+margin_right = -286.633
+margin_bottom = -103.725
+rect_scale = Vector2( 2.38492, 2.32932 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="elmo" type="Button" parent="."]
+margin_left = -211.757
+margin_top = -132.201
+margin_right = -199.757
+margin_bottom = -112.201
+rect_scale = Vector2( 2.38492, 2.32932 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="roupa" type="Button" parent="."]
+margin_left = -259.292
+margin_top = 46.1779
+margin_right = -247.292
+margin_bottom = 66.1779
+rect_scale = Vector2( 2.38492, 2.32932 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="escudo" to="." method="_on_escudo_pressed"]
+[connection signal="pressed" from="espada" to="." method="_on_espada_pressed"]
+[connection signal="pressed" from="elmo" to="." method="_on_elmo_pressed"]
+[connection signal="pressed" from="roupa" to="." method="_on_roupa_pressed"]
