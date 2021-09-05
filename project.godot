@@ -13,6 +13,11 @@ config_version=4
 config/name="RPG"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1366
+window/size/height=728
+
 [global]
 
 lang=false
