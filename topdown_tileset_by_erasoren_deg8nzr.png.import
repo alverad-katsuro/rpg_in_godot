@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topdown_tileset_by_erasoren_deg8nzr.png-3047f10070184816d551a7ce52be068e.stex"
+path="res://.import/topdown_tileset_by_erasoren_deg8nzr.png-632d3d605309606daa6e9835cde5f093.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assetes/topdown_tileset_by_erasoren_deg8nzr.png"
-dest_files=[ "res://.import/topdown_tileset_by_erasoren_deg8nzr.png-3047f10070184816d551a7ce52be068e.stex" ]
+source_file="res://topdown_tileset_by_erasoren_deg8nzr.png"
+dest_files=[ "res://.import/topdown_tileset_by_erasoren_deg8nzr.png-632d3d605309606daa6e9835cde5f093.stex" ]
 
 [params]
 
