@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://title_screen/font/balsamic_sans_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://title_screen/menu_options/options_options/botao_opcao.gd" type="Script" id=2]
+
+[node name="Resolução" type="Button"]
+margin_right = 383.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "NOTHING"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

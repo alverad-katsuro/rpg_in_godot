@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://title_screen/font/balsamic_sans_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://title_screen/menu_options/options_options/Options.gd" type="Script" id=2]
+
+[node name="Opçoes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuOpcoes" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Primeira linha" type="HBoxContainer" parent="MenuOpcoes"]
+margin_right = 1366.0
+margin_bottom = 65.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resolução" type="Button" parent="MenuOpcoes/Primeira linha"]
+margin_left = 404.0
+margin_right = 804.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "Alterar Resolução"
+
+[node name="its" type="Button" parent="MenuOpcoes/Primeira linha"]
+margin_left = 844.0
+margin_right = 883.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+
+[node name="life" type="Button" parent="MenuOpcoes/Primeira linha"]
+margin_left = 923.0
+margin_right = 962.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+
+[node name="CenterContainer2" type="CenterContainer" parent="MenuOpcoes"]
+margin_top = 69.0
+margin_right = 1366.0
+margin_bottom = 327.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Segunda linha" type="HBoxContainer" parent="MenuOpcoes"]
+margin_top = 331.0
+margin_right = 1366.0
+margin_bottom = 396.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wew" type="Button" parent="MenuOpcoes/Segunda linha"]
+margin_left = 584.0
+margin_right = 623.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+
+[node name="bro" type="Button" parent="MenuOpcoes/Segunda linha"]
+margin_left = 663.0
+margin_right = 702.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+
+[node name="whoiam" type="Button" parent="MenuOpcoes/Segunda linha"]
+margin_left = 742.0
+margin_right = 781.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "..."
+
+[node name="CenterContainer" type="CenterContainer" parent="MenuOpcoes"]
+margin_top = 400.0
+margin_right = 1366.0
+margin_bottom = 659.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Terceira linha" type="HBoxContainer" parent="MenuOpcoes"]
+margin_top = 663.0
+margin_right = 1366.0
+margin_bottom = 728.0
+custom_constants/separation = 500
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirmar" type="Button" parent="MenuOpcoes/Terceira linha"]
+margin_left = 363.0
+margin_right = 464.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "YES"
+
+[node name="Sair" type="Button" parent="MenuOpcoes/Terceira linha"]
+margin_left = 964.0
+margin_right = 1003.0
+margin_bottom = 65.0
+custom_fonts/font = ExtResource( 1 )
+text = "X"
+
+[connection signal="pressed" from="MenuOpcoes/Terceira linha/Sair" to="." method="_on_Sair_pressed"]
