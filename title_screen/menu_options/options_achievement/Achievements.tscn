@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://title_screen/font/balsamic_sans_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://title_screen/menu_options/options_achievement/Achievements.gd" type="Script" id=2]
+
+[node name="Achievements" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ElementosHorizontalmente" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1266.0
+margin_bottom = 648.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enfileiração" type="GridContainer" parent="ElementosHorizontalmente"]
+margin_right = 12.0
+margin_bottom = 568.0
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecretA" type="VBoxContainer" parent="ElementosHorizontalmente/Enfileiração"]
+
+[node name="ExHardA" type="VBoxContainer" parent="ElementosHorizontalmente/Enfileiração"]
+margin_left = 4.0
+margin_right = 4.0
+
+[node name="HardA" type="VBoxContainer" parent="ElementosHorizontalmente/Enfileiração"]
+margin_left = 8.0
+margin_right = 8.0
+
+[node name="NormalA" type="VBoxContainer" parent="ElementosHorizontalmente/Enfileiração"]
+margin_left = 12.0
+margin_right = 12.0
+
+[node name="EasyA" type="VBoxContainer" parent="ElementosHorizontalmente/Enfileiração"]
+margin_top = 4.0
+margin_bottom = 4.0
+
+[node name="Separador" type="CenterContainer" parent="ElementosHorizontalmente"]
+margin_left = 16.0
+margin_right = 1103.0
+margin_bottom = 568.0
+size_flags_horizontal = 3
+
+[node name="Sair" type="Button" parent="ElementosHorizontalmente"]
+margin_left = 1107.0
+margin_top = 503.0
+margin_right = 1146.0
+margin_bottom = 568.0
+size_flags_vertical = 8
+custom_fonts/font = ExtResource( 1 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ElementosHorizontalmente/Sair" to="." method="_on_Sair_pressed"]
