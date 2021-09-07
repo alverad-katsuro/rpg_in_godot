@@ -1,21 +1,20 @@
 extends Node2D
 
-onready var bodySprite = $Composicao/Body/Body_clothes
-onready var chairSprite = $Composicao/Body/head/chair
-onready var helmprite = $Composicao/Body/head/chair/helm
-onready var armLeftSprite = $Composicao/Body/arm_l/Left_Arm_clothes
-onready var handLeftSprite = $Composicao/Body/arm_l/hand_l/left_hand_01
-onready var shieldSprite = $Composicao/Body/arm_l/hand_l/Shield
-onready var legLeftSprite = $Composicao/Body/leg_l/Left_Shoes
-onready var armRightSprite = $Composicao/Body/arm_r/roupa
-onready var handRightSprite = $Composicao/Body/arm_r/hand_r/right_hand_01
-onready var swordSprite = $Composicao/Body/arm_r/hand_r/Sword
-onready var legRightSprite = $Composicao/Body/leg_r/Right_Shoes
 
-const composite_sprites = preload("res://assetes/warrior/front/roupas/swuit_roupa.gd")
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var bodySprite = $Composicao/KinematicBody2D/front/Body_clothes
+onready var chairSprite = $Composicao/KinematicBody2D/front/head/chair
+onready var helmprite = $Composicao/KinematicBody2D/front/head/chair/helm
+onready var armLeftSprite = $Composicao/KinematicBody2D/front/arm_l/Left_Arm_clothes
+onready var handLeftSprite = $Composicao/KinematicBody2D/front/arm_l/hand_l/left_hand_01
+onready var shieldSprite = $Composicao/KinematicBody2D/front/arm_l/hand_l/Shield
+onready var legLeftSprite = $Composicao/KinematicBody2D/front/leg_l/Left_Shoes
+onready var armRightSprite = $Composicao/KinematicBody2D/front/arm_r/roupa
+onready var handRightSprite = $Composicao/KinematicBody2D/front/arm_r/hand_r/right_hand_01
+onready var swordSprite = $Composicao/KinematicBody2D/front/arm_r/hand_r/Sword
+onready var legRightSprite = $Composicao/KinematicBody2D/front/leg_r/Right_Shoes
+
+const composite_sprites = preload("res://assetes/warrior/front/roupas/swuit_roupa_front.gd")
+
 
 var curr_body: int = 0 
 var curr_helm: int = 0 
@@ -28,12 +27,7 @@ func _ready():
 	helmprite.texture = composite_sprites.helmSprite_sheet[curr_helm]
 	swordSprite.texture = composite_sprites.swordSprite_sheet[curr_sword]
 	shieldSprite.texture = composite_sprites.shieldSprite_sheet[curr_shield]
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+	
 
 func _on_escudo_pressed():
 	curr_shield = (curr_shield + 1) % composite_sprites.shieldSprite_sheet.size()
