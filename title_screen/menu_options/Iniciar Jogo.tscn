@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://title_screen/font/balsamic_sans_48.tres" type="DynamicFont" id=1]
+
+[node name="Iniciar Jogo" type="Button"]
+margin_right = 339.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 1 )
+text = "INICIAR JOGO"
